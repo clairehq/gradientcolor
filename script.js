@@ -19,12 +19,11 @@ color2.addEventListener("input", setGradient);
 var button = document.getElementById("mybutton");
 
 function randomColor() {
-    //var color = "#";
-//     for(var i = 0; i < 6; i++){
-//         color += Math.floor((Math.random() * 16)).toString(16);
-//   }
-    return "#" + Math.floor(Math.random()*16777215).toString(16);
- //   return color;
+    var color = "#";
+    for(var i = 0; i < 6; i++){
+        color += Math.floor((Math.random() * 16)).toString(16);
+  }
+    return color;
   }
 
 button.addEventListener('click', function(){
