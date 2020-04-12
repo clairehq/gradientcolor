@@ -18,7 +18,7 @@ color2.addEventListener("input", setGradient);
 // random color
 var button = document.getElementById("mybutton");
 
-function randmColor() {
+function randomColor() {
     var color = "#";
     for(var i = 0; i < 6; i++){
         color += Math.floor((Math.random() * 16)).toString(16);
@@ -26,7 +26,9 @@ function randmColor() {
     return color;
   }
 
-  mybutton.addEventListener('click', function(){
-    //body.style.background = randmColor(); 
-    body.style.backgeound = "linear-gradient(to right," + color + "," + color + ");";
-    });
+
+button.addEventListener('click', function(){
+    var color1 = randomColor();
+    var color2 = randomColor();
+    body.style.background = "linear-gradient(to right," + color1 + "," + color2 + ")";
+});
